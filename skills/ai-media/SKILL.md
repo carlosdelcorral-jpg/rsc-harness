@@ -2,7 +2,7 @@
 name: ai-media
 description: "Use when a creative goal must become a finished media file: pick and order generative-media models per modality — AI voiceover, image-to-video clips, score — then glue them with ffmpeg (mux, duck, loudnorm, concat). NOT still-image generation/editing (that is `replicate-images`); NOT code-rendered React compositing (that is `remotion-video`)."
 tags: [ai-media, text-to-speech, image-to-video, voiceover, music-generation, ffmpeg, media-pipeline, elevenlabs]
-recommends: [replicate-images, fal, replicate, remotion-video, video-shorts]
+recommends: [replicate-images, fal, replicate, remotion-video, video-shorts, scroll-film]
 origin: risco
 ---
 
@@ -23,7 +23,7 @@ Map the goal to modalities and an ordered step list, and **lock that plan before
 | Just a clip from a still | img→video only | still (input) → clip | `fal`/`replicate` |
 | Code-rendered explainer | none of the above | render from React/TS | **stop — route to `remotion-video`** |
 
-If the video is *rendered from data/code* (charts, timelines, JSON-driven scenes), this is not your job → `../remotion-video/SKILL.md`. You handle *model-generated + ffmpeg-glued*.
+If the video is *rendered from data/code* (charts, timelines, JSON-driven scenes), this is not your job → `../remotion-video/SKILL.md`. You handle *model-generated + ffmpeg-glued*. If the clips will be scrubbed by scroll on a page instead of played as a file, the chain, its seams and the page are `../scroll-film/SKILL.md`.
 
 ## Modality 1 — Voice (TTS)
 

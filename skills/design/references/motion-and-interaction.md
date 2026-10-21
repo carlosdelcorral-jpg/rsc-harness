@@ -220,6 +220,10 @@ Both are opt-in above a motion budget, both stay inside
 `@media (prefers-reduced-motion: no-preference)`, and both collapse to a plain vertical stack
 below `768px` rather than pinning on a phone.
 
+A **pre-rendered video scrubbed by scroll** (a camera flying through scenes, Apple-style) is not a
+timeline animation. The clips, the seams between them and the scrub engine are
+`../../scroll-film/SKILL.md`.
+
 ## See Also
 
 - `visual-system.md` — the easing and duration tokens these animations consume.

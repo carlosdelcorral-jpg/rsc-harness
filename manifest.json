@@ -1,7 +1,7 @@
 {
   "version": "3.1.3",
   "counts": {
-    "skills": 271,
+    "skills": 272,
     "agents": 34,
     "commands": 53,
     "fixedCommands": 20
@@ -124,7 +124,8 @@
         "fal",
         "replicate",
         "remotion-video",
-        "video-shorts"
+        "video-shorts",
+        "scroll-film"
       ],
       "profiles": []
     },
@@ -4299,6 +4300,30 @@
         "fly-io"
       ],
       "profiles": []
+    },
+    {
+      "id": "scroll-film",
+      "description": "Use when a page's hero is a pre-rendered camera flight the visitor scrubs by scrolling, Apple-style: AI clips chained frame to frame so seams never pop, encoded for seeking, mounted with an engine that holds up on phones. NOT scroll reveals or pinning (that is `design`), NOT a finished MP4 (that is `ai-media`).",
+      "tags": [
+        "scroll-scrub",
+        "scroll-video",
+        "scrollytelling",
+        "landing-hero",
+        "image-to-video",
+        "camera-flight",
+        "seamless-video"
+      ],
+      "recommends": [
+        "ai-media",
+        "fal",
+        "replicate-images",
+        "landing-copy",
+        "design",
+        "performance"
+      ],
+      "profiles": [
+        "full"
+      ]
     },
     {
       "id": "sdd",

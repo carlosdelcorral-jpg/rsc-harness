@@ -242,8 +242,8 @@
     [tr('  ◐ deferred  ', '  ◐ pospuesto  '), 't-amb', p.def, 't-dim'],
     [tr('  ✕ excluded  ', '  ✕ excluido  '), 't-ros', p.exc, 't-dim'],
     [tr('? Accept this exact plan? ', '? ¿Aceptas este plan exacto? '), 't-dim', tr('› yes', '› sí'), 't-acc'],
-    ['', '', tr(`installed ${p.n} of 271`, `instaladas ${p.n} de 271`), 't-acc'],
-    ['', '', tr(`the other ${271 - p.n} stay out of your context`, `las otras ${271 - p.n} no ocupan tu contexto`), 't-dim'],
+    ['', '', tr(`installed ${p.n} of 272`, `instaladas ${p.n} de 272`), 't-acc'],
+    ['', '', tr(`the other ${272 - p.n} stay out of your context`, `las otras ${272 - p.n} no ocupan tu contexto`), 't-dim'],
   ]; };
   const esc = (s) => s.replace(/[&<>]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
   async function typePlan(fast) {
@@ -456,7 +456,7 @@
     const REF = [['npm test', tr('128 passed', '128 pasan'), 'ok'], [tr('task 3 done?', '¿tarea 3 hecha?'), tr('proof attached', 'con prueba'), 'ok'], [tr('lane', 'carril'), tr('FTD · one document', 'FTD · un documento'), 'ok'], [tr('reply', 'respuesta'), tr('in your language', 'en tu idioma'), 'ok'], [tr('push to main?', '¿push a main?'), tr('asks you first', 'te pregunta antes'), 'amb']];
     async function run() {
       const mem = $('#plMem'), hands = $('#plHands'), trade = $('#plTrade'), ref = $('#plRef');
-      trade.innerHTML = '<div class="pl-chips">' + TRADE.map((t) => `<span class="pl-chip" data-t="${t}">${t}</span>`).join('') + '</div><div class="pl-line" style="margin-top:12px"><span class="k">' + tr('installed', 'instaladas') + '</span><b id="plN">0</b><span class="k">' + tr('of 271', 'de 271') + '</span></div><div class="pl-meter"><i id="plM"></i></div>';
+      trade.innerHTML = '<div class="pl-chips">' + TRADE.map((t) => `<span class="pl-chip" data-t="${t}">${t}</span>`).join('') + '</div><div class="pl-line" style="margin-top:12px"><span class="k">' + tr('installed', 'instaladas') + '</span><b id="plN">0</b><span class="k">' + tr('of 272', 'de 272') + '</span></div><div class="pl-meter"><i id="plM"></i></div>';
       let k = 0;
       for (;;) {
         const m = MEM[k % MEM.length]; line(mem, `<span class="ok">+</span><span>wiki/${m[0]}</span><span class="k">${m[1]}</span>`, 4);
@@ -465,7 +465,7 @@
         await wait(700);
         const chips = $$('.pl-chip', trade); const on = k % 2 === 0;
         chips.forEach((c, i) => setTimeout(() => c.classList.toggle('on', on && PICK.has(c.dataset.t)), reduce ? 0 : i * 70));
-        $('#plN').textContent = on ? PICK.size : 0; $('#plM').style.width = on ? (PICK.size / 271 * 100 * 12) + '%' : '0%';
+        $('#plN').textContent = on ? PICK.size : 0; $('#plM').style.width = on ? (PICK.size / 272 * 100 * 12) + '%' : '0%';
         await wait(700);
         const r = REF[k % REF.length]; line(ref, `<span class="${r[2]}">${r[2] === 'ok' ? '✓' : '?'}</span><span>${r[0]}</span><span class="k">${r[1]}</span>`, 4);
         await wait(1400); k++;
@@ -620,7 +620,7 @@
   ScrollTrigger.create({ trigger: '#wall', start: 'top 82%', once: true, onEnter: () => {
     const order = cells.map((c, i) => i).sort(() => Math.random() - 0.5);
     order.forEach((i, k) => setTimeout(() => { cells[i].classList.add('flash'); setTimeout(() => cells[i].classList.remove('flash'), 420); }, k * 5));
-    const el = $('#wallN'); const o = { v: 271 }; el.textContent = '271';
+    const el = $('#wallN'); const o = { v: 272 }; el.textContent = '272';
     gsap.to(o, { v: 7, duration: 2.4, delay: 0.5, ease: 'power3.inOut', onUpdate() { el.textContent = Math.round(o.v); } });
   } });
   // final
